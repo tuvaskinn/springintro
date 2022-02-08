@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://code.jquery.com/jquery"> </script>
+    <script type="text/javascript">
+        function hallo() {
+            const url = "/?navn=" + $("#navn").val();
+
+            $.get(url, function (data) {
+                $("#hallo").html(data);
+            });
+        }
+    </script>
+</head>
+<body>
+
+Skriv inn ditt navn: <input type="text" id="navn" />
+
+<button onclick="hallo();">Trykk meg</button>
+
+<div id="hallo"></div>
+
+</body>
+</html>
